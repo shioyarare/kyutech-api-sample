@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   mount OkComputer::Engine, at: '/healthcheck'
 
   get '/kadai2', to: 'kadai2#index'
+  
+  get '/kadai3', to: 'kadai3#index'
+  get '/kadai3/:id', to: 'kadai3#show'
+  post '/kadai3', to: 'kadai3#post'
 end
