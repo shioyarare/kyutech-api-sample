@@ -1,6 +1,6 @@
 class Kadai3Controller < ApplicationController
   def index
-    render plain: Post.limit(50).map(&:body).join("\n")
+    render plain: Post.limit(50).map{ |x| "#{x.id}: '#{x.body}'" }.join("\n")
   end
 
   def show
@@ -21,6 +21,6 @@ class Kadai3Controller < ApplicationController
   private 
 
   def kadai3_params
-    params.require(:posts).permit(:value)
+    params.require(:posts).permit(:body)
   end
 end
