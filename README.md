@@ -1,24 +1,19 @@
 # API サーバのサンプル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 課題1. ヘルスチェック: GET
+エンドポイント `/healthcheck` に対する GET の実行でヘルスチェックを行う
+=> 手始めに疎通確認！
 
-Things you may want to cover:
+## 課題2. ソースコードの入手: GET
+エンドポイント `/kadai2` に対する GET メソッドの実行で何らかのプログラムを受け取る
 
-* Ruby version
+## 課題3. 簡単なSNSサービス: POST
+### 投稿
+エンドポイント `/kadai3` に対する POST メソッド実行で `value` に格納されたメッセージを投稿
+レスポンスとして固有のidが返ってくる
 
-* System dependencies
+### 投稿の確認
+エンドポイント `/kadai3/:id` によってきちんと先ほどのメッセージが投稿されていることを確認
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 最新の投稿のチェック
+エンドポイント `/kadai3` に対する GET メソッド実行により最新50件の全メッセージを取得する
